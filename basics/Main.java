@@ -11,13 +11,14 @@ public class Main {
 
     public static String pluralize(String word,int count ){
         if (count > 1 || count == 0){
-
         return (word + "s");
         }else{
         return (word);
     }
     
 }
+    public static void flipHeads()
+
 
 
 
