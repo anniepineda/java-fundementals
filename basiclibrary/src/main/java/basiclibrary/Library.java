@@ -4,6 +4,8 @@
 package basiclibrary;
 
 public class Library {
+    //methods form wed. lab and Thurs. part a. lab
+
     public boolean someLibraryMethod() {
         return true;
     }
