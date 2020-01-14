@@ -6,9 +6,25 @@ package basiclibrary;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/////////////////////////////////////////////////Lab 02//////////////////////////////////////////////////
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    @Test public void testRoll() {
+
+        int[] results = Library.roll(50);
+        for (int i=0; i < results.length; i++){
+            assertTrue(results[i] >= 1 && results[i] <= 6);
+        }
     }
+
+    @Test public void testCheckDuplicates(){
+        int[] input = new int[]{3, 4, 6, 3, 6, 8, 9};
+        assertTrue(Library.containsDuplicates(input));
+    }
+
+    @Test public void testCheckDuplicates_noDuplicates(){
+        int[] input = new int[]{1,5,7,2,9};
+        assertFalse(Library.containsDuplicates(input));
+    }
+
+
 }

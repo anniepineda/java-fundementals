@@ -4,9 +4,38 @@
 package basiclibrary;
 
 public class Library {
-    //methods form wed. lab and Thurs. part a. lab
 
-    public boolean someLibraryMethod() {
-        return true;
+    public static int[] roll(int n){
+        int[] storingDiceRolls = new int[n];
+
+        //iterating over each index of the array and inserting a random number between 1-6
+        for (int i = 0; i < n; i++){
+            storingDiceRolls[i] = rollSixSidedDice();
+        }
+
+        return storingDiceRolls;
     }
+
+    // got help form: https://stackoverflow.com/questions/363681/how-do-i-generate-random-integers-within-a-
+    // specific-range-in-java
+
+    public static int rollSixSidedDice(){
+        int MIN = 1;
+        int MAX = 6;
+        return MIN + (int)(Math.random() * ((MAX - MIN) + 1));
+    }
+
+    public static boolean containsDuplicates(int[] arg) {
+        for (int i = 0; i < arg.length; i++) {
+            for (int j = i + 1; j < arg.length; j++) {
+                if (arg[i] == (arg[j])) {
+                    return true;
+                }
+            }
+        }
+        return false;
+
+    }
+
+
 }
